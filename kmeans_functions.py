@@ -107,7 +107,6 @@ def plot_clusters_profile(data,
                           title_fontsize,
                           fontsize, 
                           path_to_save):
-
     for cluster in range(model.n_clusters):
         print(f"Cluster {cluster} is being treated...")
         cluster_samples_idx = np.where(predictions == cluster)

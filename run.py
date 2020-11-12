@@ -108,8 +108,8 @@ number_clusters = 11
 kmeans_kwargs = {"init": "k-means++", "max_iter": 300}
 #Choosing the optimal number of clusters with the ELBOW method
 sse_results = compute_sse(coordinates=mds_coordinates,
-                  n_clusters=number_clusters,
-                  kmeans_kwargs=kmeans_kwargs) 
+                          n_clusters=number_clusters,
+                          kmeans_kwargs=kmeans_kwargs) 
 sse = sse_results["sse"] 
 models_sse = sse_results["models"]     
 plot_scores(scores=sse, n_clusters=number_clusters, type_="sse", title="SSE")
@@ -120,8 +120,8 @@ optimal_n_clusters_sse = get_optimal_n_clusters(n_clusters=number_clusters,
 
 #Choosing the optimal number of clusters with the SILHOUETTE method
 silhouette_results = compute_silhouette(mds_coordinates, 
-                                       n_clusters=number_clusters, 
-                                       kmeans_kwargs=kmeans_kwargs)
+                                        n_clusters=number_clusters, 
+                                        kmeans_kwargs=kmeans_kwargs)
 silhouette_scores = silhouette_results["silhouette_scores"]
 models_silhouette = silhouette_results["models"]
 plot_scores(scores=silhouette_scores, 
